@@ -25,7 +25,7 @@ export class PontuacaoComponent implements OnInit {
 
   // Carregar o ranking do backend
   getRanking(): void {
-    this.http.get<UsuarioPontuacao[]>('http://18.230.197.11:8443/alunos/ranking').subscribe(
+    this.http.get<UsuarioPontuacao[]>('https://18.230.197.11:8443/alunos/ranking').subscribe(
       (response) => {
         // Ordenar por pontos em ordem decrescente
         const sortedRanking = response.sort((a, b) => b.pontuacao - a.pontuacao);
