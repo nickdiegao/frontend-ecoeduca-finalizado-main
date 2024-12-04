@@ -30,7 +30,7 @@ export class UserProfileComponent implements OnInit {
   }
 
   getAluno(id: number): void {
-    this.http.get<Aluno>(`https://54.232.216.166/alunos/${id}`).subscribe(
+    this.http.get<Aluno>(`https://54.232.216.166:8443/alunos/${id}`).subscribe(
       response => {
         console.log('Dados do aluno:', response);  // Adicione um log para depuração
         this.alunos = response;

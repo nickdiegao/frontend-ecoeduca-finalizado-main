@@ -32,7 +32,7 @@ export class TelaLoginComponent {
 
   // Método que envia os dados para o backend
   onSubmit(): void {
-    const url = 'https://54.232.216.166/alunos'; // URL do backend
+    const url = 'https://54.232.216.166:8443/alunos'; // URL do backend
 
     // Estrutura o objeto `user` de forma que ele corresponda à estrutura esperada pelo backend
     const usuario = {
