@@ -27,7 +27,7 @@ export class TelaCadastroComponent {
     
     this.authService.login(email, senha).subscribe(
       response => {
-        console.log('Login bem-sucedido', response);
+        // console.log('Login bem-sucedido', response);
         // Salva o ID do usuário e redireciona para a página principal
         this.authService.salvarIdAluno(response.idAluno);  
         this.router.navigate(['/home']);  
