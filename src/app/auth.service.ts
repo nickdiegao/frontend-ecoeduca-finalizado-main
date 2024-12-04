@@ -7,8 +7,8 @@ import { Observable } from 'rxjs';
 })
 export class AuthService {
 
-  private apiUrl = 'https://18.230.197.11:8443/login'; // A URL do endpoint de login no backend
-  private apiUrlAlunos = 'https://18.230.197.11:8443/alunos';
+  private apiUrl = 'https://54.232.216.1663/login'; // A URL do endpoint de login no backend
+  private apiUrlAlunos = 'https://54.232.216.166/alunos';
 
   constructor(private http: HttpClient) { }
 

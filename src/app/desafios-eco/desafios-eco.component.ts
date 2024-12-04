@@ -69,7 +69,7 @@ export class DesafiosEcoComponent implements AfterViewChecked {
         formData.append('imagem', this.imagem);
       }
 
-      this.http.post('https://18.230.197.11:8443/postagens/upload', formData).subscribe(
+      this.http.post('https://54.232.216.166:8443/postagens/upload', formData).subscribe(
         (response: any) => {
           console.log('Postagem criada com sucesso!', response);
           this.limparFormulario();
@@ -90,7 +90,7 @@ export class DesafiosEcoComponent implements AfterViewChecked {
   }
 
   getPostagens(): void {
-    this.http.get<Postagem[]>('https://18.230.197.11:8443/postagens').subscribe(
+    this.http.get<Postagem[]>('https://54.232.216.166:8443/postagens').subscribe(
       (response) => {
         this.postagens = response;
         console.log(this.postagens);
@@ -113,7 +113,7 @@ export class DesafiosEcoComponent implements AfterViewChecked {
   }
 
   deletarPostagem(id: number): void {
-    this.http.delete(`https://18.230.197.11:8443/postagens/${id}`).subscribe(
+    this.http.delete(`https://54.232.216.166:8443/postagens/${id}`).subscribe(
       (response) => {
         console.log('Postagem excluída com sucesso!', response);
         this.postagens = this.postagens.filter((postagem) => postagem.id !== id);
